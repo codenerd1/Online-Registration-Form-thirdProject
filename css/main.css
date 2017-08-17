@@ -1,0 +1,277 @@
+html {
+   max-width:100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merriweather', sans-serif;
+  color: #384047;
+  margin:0;
+  font-size: 15px;
+}
+
+
+
+form {
+  max-width: 600px;
+  margin: 5px auto;
+  padding: 5px 5px;
+  border-radius: 8px;
+}
+input[type="number"] {
+	width: 30%;
+  background: rgba(255,255,255,0.1);
+  border:none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+  margin-top:10px;
+	
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border:none;
+  font-size: 15px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 8px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+  margin: 5px auto;
+}
+
+fieldset,
+.control-group {
+  border: 0px;
+  padding:0px;
+  margin:0px 3px;
+  font-size: 13px;
+  
+}
+
+	
+legend {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+h2 {
+	 font-size: 1.4em;
+}
+
+input::placeholder {
+	text-align: right;
+	padding-right:10px;
+	font-size:15px;
+	color: lightgrey;
+}
+
+
+input:focus,
+select:focus,
+textArea:focus{
+	border: 1px solid black;
+	color: black;
+}
+header {
+	background:black;
+	color: #fff;
+	padding:10px 0px;
+	border: 0;
+	margin: 0px;
+	
+}
+
+header,
+footer,
+.into{
+	text-align: center;
+}
+div {
+	margin-bottom: 30px;
+}
+
+footer p,
+div p{
+	color: grey;
+}
+div p {
+	margin-bottom: 25px;
+}
+
+.line-1 {
+	border-width: 4px;
+	border-color: black;
+}
+.line-2 {
+	border-width: 1.5px;
+	border-color: black;
+}
+
+/*============================
+    checkbox and radio styles 
+  ============================*/
+  
+.control {
+	font-size: 13px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border: 1px solid black;
+	border-radius: 30%;
+}
+
+.control-radio .control__indicator {
+	border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #fff;
+}
+
+.control input:checked ~ .control__indicator {
+	background: blue;
+}
+
+.control__indicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+.control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+.control-checkbox :after {
+	top: 2px;
+	left: 7px;
+	width: 2px;
+	height: 7px;
+	transform: rotate(45deg);
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+}
+
+.control-radio :after {
+	top: 4px;
+	left: 4px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background: #fff;
+}
+
+
+div.control-group {
+	margin-bottom: 0px;
+}	
+.control-group p {
+	color: #384047;
+	margin-bottom: 20px;
+}
+
+.container{
+	margin: 0px;
+	padding:0px;
+}
+	
+/*=========================================
+  tablet and desktop layout- media quries 
+  =========================================*/
+  
+@media(min-width: 768px){
+	
+	
+   .container {
+		display: flex;
+		width: 100%;
+		margin: auto;
+	}
+	.container label {
+		
+		width: 22%;
+		margin:0px;
+		padding:0px;
+	}
+    .container input,
+	.container select{
+		
+		width:78%;
+		margin:0px;
+		padding:0px;
+	}
+	.container label,
+	.container select,
+    .container input {
+		margin:8px 0px;
+		padding: 5px 0px;
+	}
+	.container input[type="number"] {
+		width: 20%;
+	}
+	
+}
+
+	 
+		
+	
+
